@@ -9,9 +9,9 @@ using TRMDataManager.Library.Models;
 
 namespace TRMDataManager.Controllers
 {
+    [Authorize(Roles = "Cashier")]
     public class ProductController : ApiController
     {
-        [Authorize]
         public List<ProductModel> Get()
         {
             ProductData data = new ProductData();
